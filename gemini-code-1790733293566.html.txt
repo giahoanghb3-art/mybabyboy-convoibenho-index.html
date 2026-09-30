@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dành cho em yêu ❤️</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        /* Hiệu ứng trái tim đập */
+        .heart {
+            position: relative;
+            width: 100px;
+            height: 90px;
+            animation: heartbeat 1.2s infinite;
+            margin: 0 auto 30px auto;
+            cursor: pointer;
+        }
+
+        .heart::before,
+        .heart::after {
+            position: absolute;
+            content: "";
+            left: 50px;
+            top: 0;
+            width: 50px;
+            height: 80px;
+            background: #ff3366;
+            border-radius: 50px 50px 0 0;
+            transform: rotate(-45deg);
+            transform-origin: 0 100%;
+            box-shadow: 0 0 30px #ff3366;
+        }
+
+        .heart::after {
+            left: 0;
+            transform: rotate(45deg);
+            transform-origin: 100% 100%;
+        }
+
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            15% { transform: scale(1.25); }
+            30% { transform: scale(1); }
+            45% { transform: scale(1.15); }
+            60% { transform: scale(1); }
+        }
+
+        /* Lời chúc */
+        .message {
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: 300;
+            text-shadow: 0 0 10px rgba(255, 51, 102, 0.5);
+            max-width: 400px;
+            padding: 0 20px;
+            line-height: 1.6;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .message span {
+            color: #ff3366;
+            font-weight: bold;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="heart"></div>
+        <div class="message">
+            Gửi công chúa của anh,<br>
+            Cảm ơn em vì đã đến và mang lại niềm vui cho anh mỗi ngày. Chúc em luôn hạnh phúc và yêu anh nhiều hơn nhé! <span>❤️</span>
+        </div>
+    </div>
+
+</body>
+</html>
